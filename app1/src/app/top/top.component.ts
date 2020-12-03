@@ -8,4 +8,6 @@ import { Component } from '@angular/core'
 
 })
 
-export class TopComponent { }
+export class TopComponent {
+  public title: string = 'Aprendendo Inglês'
+}
