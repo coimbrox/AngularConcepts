@@ -18,7 +18,7 @@
         <h6> {{instruction}} </h6>
         <p> {{ phrases[0].PhrasheEng}} </p>
         <div class="form-group">
-          <textarea class="form-control" rows="3" (input)="RefreshAnswer()"></textarea>
+          <textarea class="form-control" rows="3" (input)="RefreshAnswer($event)"></textarea>
         </div>
       </div>
     </div>

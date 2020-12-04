@@ -12,6 +12,7 @@ export class PainelComponent implements OnInit {
 
   public phrases: Phrase[] = PHRASES
   public instruction: string = "Traduza a Frase"
+  public answer: string
 
 
   constructor() { console.log(this.phrases) }
@@ -19,8 +20,9 @@ export class PainelComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public RefreshAnswer(): void {
-    console.log('teste')
+  public RefreshAnswer(answer: Event): void {
+    this.answer = (<HTMLInputElement>answer.target).value
+    console.log(this.answer)
   }
 
 }
