@@ -22,7 +22,10 @@ export class PainelComponent implements OnInit {
 
   public RefreshAnswer(answer: Event): void {
     this.answer = (<HTMLInputElement>answer.target).value
-    console.log(this.answer)
+    // console.log(this.answer)
   }
 
+  public VerifyAnswer(): void {
+    console.log('Verificar Resposta: ', this.answer)
+  }
 }
