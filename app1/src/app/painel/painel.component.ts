@@ -11,6 +11,9 @@ import { PHRASES } from './phrases-mock';
 export class PainelComponent implements OnInit {
 
   public phrases: Phrase[] = PHRASES
+  public instruction: string = "Traduza a Frase"
+
+
   constructor() { console.log(this.phrases) }
 
   ngOnInit(): void {
