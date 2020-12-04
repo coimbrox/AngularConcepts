@@ -15,7 +15,13 @@ export class PainelComponent implements OnInit {
   public answer: string
 
 
-  constructor() { console.log(this.phrases) }
+  public round: number = 0
+  public roundPhrase: Phrase
+
+  constructor() {
+    this.roundPhrase = this.phrases[this.round]
+    console.log(this.roundPhrase)
+  }
 
   ngOnInit(): void {
   }
