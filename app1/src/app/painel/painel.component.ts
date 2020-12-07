@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 import { Phrase } from '../shared/phrase.model';
 import { PHRASES } from './phrases-mock';
@@ -21,6 +21,8 @@ export class PainelComponent implements OnInit {
   public progress: number = 0
 
   public attempts: number = 3
+
+  @Output() public EndGame: EventEmitter<string> = new EventEmitter()
 
 
   constructor() {
@@ -48,7 +50,7 @@ export class PainelComponent implements OnInit {
 
       //aviso vitoria
       if (this.round === 4) {
-        alert('Você Ganhou')
+        this.EndGame.emit('Você Ganhou')
       }
 
       //att objeto rodadafrase
@@ -60,7 +62,7 @@ export class PainelComponent implements OnInit {
 
       // console.log('Tentativas: ', this.attempts)
       if (this.attempts === -1) {
-        alert('Você Perdeu todas as Vidas,Recomece o Jogo')
+        this.EndGame.emit('Você Perdeu')
       }
     }
     console.log(this.attempts)
