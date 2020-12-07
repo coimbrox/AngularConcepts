@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, OnChanges, Input } from '@angular/core';
 import { Heart } from '../shared/heart.model'
 
 @Component({
@@ -6,7 +6,7 @@ import { Heart } from '../shared/heart.model'
   templateUrl: './tentativas.component.html',
   styleUrls: ['./tentativas.component.css']
 })
-export class TentativasComponent implements OnInit {
+export class TentativasComponent implements OnInit, OnChanges {
 
   // public EmptyHeart: string = '../../assets/coracao_vazio.png'
   // public FullHeart: string = '../../assets/coracao_cheio.png'
@@ -25,8 +25,12 @@ export class TentativasComponent implements OnInit {
 
   }
 
-  ngOnInit() {
+  ngOnChanges() {
     console.log('Tentativas recebidas do Painel', this.attempts)
+  }
+
+  ngOnInit() {
+
   }
 
 
