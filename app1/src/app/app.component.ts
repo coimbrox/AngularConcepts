@@ -7,7 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+
+  public InProgressGame: boolean = true
+
   public EndGame(type: string): void {
     console.log(type);
+    this.InProgressGame = false
   }
 }
