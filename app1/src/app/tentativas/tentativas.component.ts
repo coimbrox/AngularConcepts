@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Heart } from '../shared/heart.model'
 
 @Component({
   selector: 'app-tentativas',
@@ -10,9 +11,18 @@ export class TentativasComponent implements OnInit {
   public EmptyHeart: string = '../../assets/coracao_vazio.png'
   public FullHeart: string = '../../assets/coracao_cheio.png'
 
-  constructor() { }
+  public hearts: Heart[] = [
+    new Heart(true),
+    new Heart(true),
+    new Heart(true),
+  ]
+
+  constructor() {
+    console.log(this.hearts)
+  }
 
   ngOnInit(): void {
   }
+
 
 }
