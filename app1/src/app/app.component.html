@@ -2,11 +2,12 @@
 <div *ngIf="InProgressGame; else EndGame">
   <app-painel (EndGame)="EndGame($event)"></app-painel>
 </div>
-<ng-template #EndGame>
+<!-- <ng-template #EndGame>
   <div *ngIf="typeEnd === 'Derrota'; else EndGameVitoria" class="containter" style="margin-top: 50px;">
     <div class="row">
       <div class="col">
         <h3 style="color: red;"> Você Perdeu</h3>
+        <button class="btn btn-primary" (click)="resetGame()">Jogar Novamente</button>
       </div>
     </div>
   </div>
@@ -17,7 +18,8 @@
     <div class="row">
       <div class="col">
         <h3 style="color:green"> Você Perdeu</h3>
+        <button class="btn btn-primary" (click)="resetGame()">Jogar Novamente</button>
       </div>
     </div>
   </div>
-</ng-template>
+</ng-template> -->

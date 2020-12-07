@@ -15,4 +15,9 @@ export class AppComponent {
     this.InProgressGame = false
     this.typeEnd = type
   }
+  public resetGame(): void {
+    this.InProgressGame = true
+    this.typeEnd = undefined
+  }
+
 }
