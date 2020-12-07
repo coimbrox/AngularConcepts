@@ -11,7 +11,7 @@ export class TentativasComponent implements OnInit {
   // public EmptyHeart: string = '../../assets/coracao_vazio.png'
   // public FullHeart: string = '../../assets/coracao_cheio.png'
 
-  @Input() public attemps: number
+  @Input() public attempts: number
 
 
   public hearts: Heart[] = [
@@ -26,7 +26,7 @@ export class TentativasComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log('Tentativas recebidas do Painel', this.attemps)
+    console.log('Tentativas recebidas do Painel', this.attempts)
   }
 
 
