@@ -54,7 +54,7 @@ export class PainelComponent implements OnInit, OnDestroy {
 
       //aviso vitoria
       if (this.round === 4) {
-        this.EndGame.emit('Você Ganhou')
+        this.EndGame.emit('Vitória')
       }
 
       //att objeto rodadafrase
@@ -66,7 +66,7 @@ export class PainelComponent implements OnInit, OnDestroy {
 
       // console.log('Tentativas: ', this.attempts)
       if (this.attempts === -1) {
-        this.EndGame.emit('Você Perdeu')
+        this.EndGame.emit('Derrota')
       }
     }
     console.log(this.attempts)

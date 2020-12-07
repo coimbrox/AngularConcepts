@@ -9,9 +9,10 @@ export class AppComponent {
 
 
   public InProgressGame: boolean = true
+  public typeEnd: string
 
   public EndGame(type: string): void {
-    console.log(type);
     this.InProgressGame = false
+    this.typeEnd = type
   }
 }
