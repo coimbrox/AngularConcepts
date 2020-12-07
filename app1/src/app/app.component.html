@@ -1,4 +1,13 @@
 <app-top></app-top>
-<div *ngIf="InProgressGame">
+<div *ngIf="InProgressGame;else EndGame">
   <app-painel (EndGame)="EndGame($event)"></app-painel>
 </div>
+<ng-template #EndGame>
+  <div class="containter" style="margin-top: 50px;">
+    <div class="row">
+      <div class="col">
+        <h3 style="color: blueviolet;"> Você Perdeu</h3>
+      </div>
+    </div>
+  </div>
+</ng-template>
