@@ -38,7 +38,6 @@ export class PainelComponent implements OnInit {
 
   public VerifyAnswer(): void {
     if (this.roundPhrase.PhrasePtbr == this.answer) {
-      alert('A tradução está correta')
 
       //trocar pergunta da rodada
       this.round++
@@ -46,6 +45,11 @@ export class PainelComponent implements OnInit {
       //progresso
       this.progress = this.progress + (100 / this.phrases.length)
       // console.log(this.progress)
+
+      //aviso vitoria
+      if (this.round === 4) {
+        alert('Você Ganhou')
+      }
 
       //att objeto rodadafrase
       this.refreshRound()
