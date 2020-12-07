@@ -20,6 +20,8 @@ export class PainelComponent implements OnInit {
 
   public progress: number = 0
 
+  public attempts: number = 3
+
 
   constructor() {
     this.refreshRound()
@@ -35,6 +37,7 @@ export class PainelComponent implements OnInit {
   }
 
   public VerifyAnswer(): void {
+    console.log(this.attempts)
     if (this.roundPhrase.PhrasePtbr == this.answer) {
       alert('A tradução está correta')
 
@@ -49,8 +52,13 @@ export class PainelComponent implements OnInit {
       this.refreshRound()
 
     } else {
-      alert('A tradução está errada')
+      // diminuir o valor na variaveel attemps
+      this.attempts--
+      if (this.attempts === -1) {
+        alert('Você Perdeu todas as Vidas,Recomece o Jogo')
+      }
     }
+    console.log(this.attempts)
   }
 
   public refreshRound(): void {
